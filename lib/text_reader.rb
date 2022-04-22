@@ -1,14 +1,8 @@
 class TextReader
-  # def read
-  #   read_file = ARGV[0]
-  #   File.read(file_to_read)
-  # end
+
+
 end
 
-
-def count_chars
-
-end
 
 
 

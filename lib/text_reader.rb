@@ -1,6 +1,10 @@
 class TextReader
 
-
+  attr_accessor :input_filepath, :output_filepath
+  def initialize(arg1, arg2)
+    @input_filepath = ARGV[0]
+    @output_filepath = ARGV[1]
+  end
 end
 
 

@@ -1,29 +1,20 @@
 require './lib/file_handler'
 
 RSpec.describe FileHandler do
-  let(:file_handler) {FileHandler.new('sampletest.txt', 'output.txt')}
-  let(:outfile) {StringIO.new}
+  let(:file_handler) {FileHandler.new('sampletest.txt')}
+
+    # infile = StringIO.new('sample of text')    # FileHandler.new(infile, outfile)
 
 
-    # infile = StringIO.new('sample of text')
-    # FileHandler.new(infile, outfile)
-
-  describe '#read_file' do
-    it 'returns text' do
-      expect(file_handler.read_file).to eq('sample of text')
-    end
+  it 'reads files' do
+    expect(file_handler.infile).to eq('hello world')
   end
 
-  describe '#write_file' do
-    it 'writes the text' do
-      file_handler.write_file('sample of text')
-
-      outfile.rewind
-      expect(outfile.read).to eq('sample of text')
-    end
+  it '#writes file' do
+    expect(file_handler.write_file). to eq('hello world')
   end
 
-  xit 'makes messages for outfiles' do
+  it 'makes messages for outfiles' do
     expect(file_handler.content_message).to eq(expected)
   end
 end

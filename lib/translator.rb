@@ -39,7 +39,7 @@ class Translator
     line_two = format[1].to_s.gsub(/[^0.]/, "")
     line_tres = format[2].to_s.gsub(/[^0.]/, "")
 
-    braille_format = "#{line_one} \n""#{line_two}\n""#{line_tres}\n"
+    braille_format = "#{line_one}\n"  "#{line_two}\n" "#{line_tres}"
   end
 
   def count_chars

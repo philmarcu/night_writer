@@ -23,13 +23,13 @@ RSpec.describe Translator do
     expect(translator.format).to eq(expected)
   end
 
-  xit 'can make a string format' do
+  it 'can make a string format' do
     translator = Translator.new("hello world")
 
     expected =
     "0.0.0.0.0....00.0.0.00
-     00.00.0..0..00.0000..0
-     ....0.0.0....00.0.0..."
+    00.00.0..0..00.0000..0
+    ....0.0.0....00.0.0..."
     expect(translator.string_format).to eq(expected)
   end
 

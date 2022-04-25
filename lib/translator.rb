@@ -47,10 +47,12 @@ class Translator
   end
 
   def count_chars
-    require "pry"; binding.pry
+    count = format[0].size
+      if count > 80
+        format[0].split
+      end
+    count
   end
-
-
 end
 
 # format (index +1) lets you divide the indexed positions by 3, taking the 3rd braille keys

@@ -6,7 +6,10 @@ file_handler = FileHandler.new(ARGV[0])
 
 eng_msg = 'sampletest.txt'
 
-translator = Translator.new()
+translator = Translator.new(eng_msg)
+braille = translator.translate_to_braille
+
+
 # translator = Translator.new(<english_message>)
 # braille = translator.translate_to_braille
 # File.write(ARGV[1], braille)

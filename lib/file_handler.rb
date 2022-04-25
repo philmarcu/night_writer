@@ -5,6 +5,7 @@ class FileHandler
   end
 end
 
+
 #file > text > translate > reformat > back to file
 # .map(&:chomp) cuts off the new line characters
 

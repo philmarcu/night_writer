@@ -34,6 +34,14 @@ class Translator
     [top, middle, bottom]
   end
 
+  def count_chars
+    count = string_format.size
+      if count > 80
+        string_format.split
+      end
+    count
+  end
+
   def string_format
     line_one = format[0].to_s.gsub(/[^0.]/, "")
     line_two = format[1].to_s.gsub(/[^0.]/, "")
@@ -42,11 +50,4 @@ class Translator
     braille_format = "#{line_one}\n"  "#{line_two}\n" "#{line_tres}"
   end
 
-  def count_chars
-    count = format.flatten.count
-      if count > 80
-        format.split
-      end
-    count
-  end
 end

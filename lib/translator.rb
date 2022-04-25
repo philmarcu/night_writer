@@ -43,9 +43,9 @@ class Translator
   end
 
   def count_chars
-    count = format[0].size
+    count = format.flatten.count
       if count > 80
-        format[0].split
+        format.split
       end
     count
   end

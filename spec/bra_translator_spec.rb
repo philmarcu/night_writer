@@ -4,12 +4,11 @@ require './lib/bra_dictionary'
 
 RSpec.describe BraTranslator do
   it 'exists' do
-    bra_translator = BraTranslator.new(File.open('bra_goodbye.txt', 'r'))
+    braille =
+    "000.0.000.000....00.0.0.00
+    00.0.0.00..0.0..00.0000..0
+    ..0.0.....00.....00.0.0..."
+    bra_translator = BraTranslator.new(braille)
     expect(bra_translator).to be_an_instance_of(BraTranslator)
-  end
-
-  it 'can format to english' do
-    bra_translator = BraTranslator.new(File.open('bra_goodbye.txt', 'r'))
-    expect(bra_translator.format).to eq(expected)
   end
 end

@@ -11,13 +11,12 @@ class BraTranslator
     @input = input
   end
 
-  def format
-    bra_array = input.split("\n")
-    nu_array = bra_array.map do |line|
-      line.scan(/../)
+  def output_arr
+    output_arr = input.chars.map do |char|
+      require "pry"; binding.pry
     end
+
     # vert_array = nu_array.transpose
-    require "pry"; binding.pry
     # to_eng = vert_array.map do |element|
     #   braille_dictionary[element]
     # end.join

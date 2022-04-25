@@ -18,6 +18,6 @@ RSpec.describe BraTranslator do
     00.0.0.00..0.0..00.0000..0
     ..0.0.....00.....00.0.0..."
     bra_translator = BraTranslator.new(braille)
-    expect(bra_translator.format).to eq("goodbye world")
+    expect(bra_translator.output_arr).to eq("goodbye world")
   end
 end

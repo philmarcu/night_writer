@@ -8,10 +8,10 @@ class BraTranslator
 
   def initialize(input)
     @input = input
-    require "pry"; binding.pry
   end
 
   def format
-    array = @input.split
+    array = @input.readlines
+    require "pry"; binding.pry
   end
 end

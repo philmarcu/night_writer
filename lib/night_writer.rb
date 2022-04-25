@@ -1,13 +1,22 @@
-require_relative 'file_handler'
 require_relative 'translator'
 
+message = ARGV[0]
+msg_file = File.open(ARGV[0], 'r')
+bra_file = File.open(ARGV[1], 'w')
 
-file_handler = FileHandler.new(ARGV[0])
+content = msg_file.readlines
+count = content.join.size #tells me the count for 1st file
 
-eng_msg = 'sampletest.txt'
+text = content.join
+translator = Translator.new(text)
+braille = translator.string_format
+File.write(ARGV[1], braille)
+# count = braille.size #they don't want the count of the 2nd file
+p "Created #{ARGV[1]} containing #{count} characters"
 
-translator = Translator.new(eng_msg)
-braille = translator.translate_to_braille
+# translate = Translator.new(file_handler)
+
+# braille_file.write(translate)
 
 
 # translator = Translator.new(<english_message>)

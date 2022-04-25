@@ -34,9 +34,19 @@ class Translator
       end
     end
     [top, middle, bottom]
+    # require "pry"; binding.pry
   end
 
   def string_format
+    line_one = format[0].to_s.gsub(/[^0.]/, "")
+    line_two = format[1].to_s.gsub(/[^0.]/, "")
+    line_tres = format[2].to_s.gsub(/[^0.]/, "")
+
+    braille_format = "#{line_one} \n""#{line_two}\n""#{line_tres}\n"
+    # require "pry"; binding.pry
+  end
+
+  def count_chars
     require "pry"; binding.pry
   end
 

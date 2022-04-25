@@ -14,20 +14,27 @@ RSpec.describe Translator do
     expect(translator.output_arr).to eq(["0.", "00", "..", "0.", ".0", "..", "0.", "0.", "0.", "0.", "0.", "0.", "0.", ".0", "0."])
   end
 
-  it 'can sort lines' do
+  it 'formats lines' do
     translator = Translator.new("hello world")
-    expect(translator.format).to eq([top, middle, bottom])
+    expected =
+          [["0.", "0.", "0.", "0.", "0.", "..", ".0", "0.", "0.", "0.", "00"],
+          ["00", ".0", "0.", "0.", ".0", "..", "00", ".0", "00", "0.", ".0"],
+          ["..", "..", "0.", "0.", "0.", "..", ".0", "0.", "0.", "0.", ".."]]
+    expect(translator.format).to eq(expected)
   end
 
-  it 'can make a string format' do
+  xit 'can make a string format' do
     translator = Translator.new("hello world")
 
     expected =
     "0.0.0.0.0....00.0.0.00
-    00.00.0..0..00.0000..0
-    ....0.0.0....00.0.0..."
+     00.00.0..0..00.0000..0
+     ....0.0.0....00.0.0..."
     expect(translator.string_format).to eq(expected)
   end
 
+  it 'can count characters' do
+    expect(translator.count_chars).to eq(70)
+  end
 
 end

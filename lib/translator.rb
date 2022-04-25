@@ -1,7 +1,5 @@
 require './lib/eng_dictionary'
 require './lib/bra_dictionary'
-require './lib/file_handler'
-
 
 class Translator
   include BrailleDictionary
@@ -34,7 +32,6 @@ class Translator
       end
     end
     [top, middle, bottom]
-    # require "pry"; binding.pry
   end
 
   def string_format
@@ -43,7 +40,6 @@ class Translator
     line_tres = format[2].to_s.gsub(/[^0.]/, "")
 
     braille_format = "#{line_one} \n""#{line_two}\n""#{line_tres}\n"
-    # require "pry"; binding.pry
   end
 
   def count_chars
@@ -54,6 +50,3 @@ class Translator
     count
   end
 end
-
-# format (index +1) lets you divide the indexed positions by 3, taking the 3rd braille keys
-# & moving them to the bottom row. Since its based off of the remainder the 1st row

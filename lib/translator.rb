@@ -8,6 +8,7 @@ class Translator
   attr_reader :input
   def initialize(input)
     @input = input
+    eng_dictionary
   end
 
 
@@ -37,6 +38,11 @@ class Translator
 
 
   def string_format
+    line_one = format[0].to_s.gsub(/[^0.]/, "")
+    line_two = format[1].to_s.gsub(/[^0.]/, "")
+    line_tres = format[2].to_s.gsub(/[^0.]/, "")
+    vert_letter = "#{line_one}\n#{line_two}\n#{line_tres}\n"
+    require "pry"; binding.pry
   end
 
 

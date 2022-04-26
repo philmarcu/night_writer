@@ -33,7 +33,7 @@ RSpec.describe Translator do
       expect(translator.string_format).to eq(expected)
     end
 
-    xit 'can count characters' do
+    it 'can count characters' do
       translator = Translator.new("hello world")
       expect(translator.count_chars).to eq(68)
     end

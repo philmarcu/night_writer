@@ -6,7 +6,7 @@ class Translator
   include EngDictionary
 
   attr_reader :input
-  def initialize
+  def initialize(input)
     @input = input
     eng_dictionary
   end
@@ -41,13 +41,15 @@ class Translator
     line_one = format[0].to_s.gsub(/[^0.]/, "")
     line_two = format[1].to_s.gsub(/[^0.]/, "")
     line_tres = format[2].to_s.gsub(/[^0.]/, "")
-    vert_letter = "#{line_one}\n#{line_two}\n#{line_tres}\n"
-    require "pry"; binding.pry
+    vert_letter = "#{line_one}\n#{line_two}\n#{line_tres}"
   end
 
 
 
   def count_chars
+      format.each do |line|
+        if line.count > 40
+    end
   end
 
 end

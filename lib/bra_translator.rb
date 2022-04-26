@@ -16,10 +16,10 @@ class BraTranslator
       require "pry"; binding.pry
     end
 
-    # vert_array = nu_array.transpose
-    # to_eng = vert_array.map do |element|
-    #   braille_dictionary[element]
-    # end.join
-    # to_eng
+    vert_array = nu_array.transpose
+    to_eng = vert_array.map do |element|
+      braille_dictionary[element]
+    end.join
+    to_eng
   end
 end

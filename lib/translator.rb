@@ -6,7 +6,7 @@ class Translator
   include EngDictionary
 
   attr_reader :input
-  def initialize(input)
+  def initialize
     @input = input
     eng_dictionary
   end

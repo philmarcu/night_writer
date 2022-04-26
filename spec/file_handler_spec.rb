@@ -13,8 +13,8 @@ RSpec.describe FileHandler do
   end
 
   it 'writes to files' do
-  file_handler.write_file('hello world')
-  outfile.rewind
-  expect(outfile.read).to eq('hello world')
+    file_handler.write_file('hello world')
+    outfile.rewind
+    expect(outfile.read).to eq('hello world')
   end
 end

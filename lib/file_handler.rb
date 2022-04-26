@@ -7,7 +7,7 @@ class FileHandler
 
   def write_file
     # require "pry"; binding.pry
-    @outfile = File.open(ARGV[1], 'w')
+    @outfile = File.write(ARGV[0])
   end
 end
 

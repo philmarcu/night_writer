@@ -46,7 +46,8 @@ class Translator
 
   def count_chars
     require "pry"; binding.pry
-    word_length = format[0]transpose.count
+  end
+
       #current count = 11. 11*3 -- max is 26 * 3 (26 braille pairs)
     # count = string_format.length
     # require "pry"; binding.pry
@@ -55,6 +56,5 @@ class Translator
     #   #don't think this is actually separating the next braille characters
     # end
     # count
-  end
 
 end
